@@ -34,9 +34,10 @@ export default function HomePage() {
           <Link href="/" className="funk-brand" aria-label="Corpse Club home"><span>Corpse</span><strong>Club</strong></Link>
           <div className="funk-header__actions">
             <nav className="funk-nav" aria-label="Main navigation">
-              <a href="#lounge"  onClick={() => setMenuOpen(false)}>Lounge</a>
-              <a href="#library" onClick={() => setMenuOpen(false)}>Library</a>
-              <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+              <a href="#lounge"   onClick={() => setMenuOpen(false)}>Lounge</a>
+              <a href="#library"  onClick={() => setMenuOpen(false)}>Library</a>
+              <a href="#ps5"      onClick={() => setMenuOpen(false)}>PS5 Pricing</a>
+              <a href="#contact"  onClick={() => setMenuOpen(false)}>Contact</a>
             </nav>
             <div className="funk-time"><span>Next slot</span><strong>7:20 PM&nbsp; • &nbsp;Tonight</strong></div>
             <Link href="/book" className="funk-book">Book now</Link>
@@ -92,6 +93,39 @@ export default function HomePage() {
       <section className="funk-rates" id="contact">
         <div><span>03 / Walk in, power up</span><h2>KEEP IT<br /><em>SIMPLE.</em></h2></div>
         <article className="funk-rate-card"><p>Starting from</p><strong>₹50</strong><span>per 20-minute solo session</span><hr /><div><b>Solo pod</b><em>₹50 / 20 min</em><b>Duo pod</b><em>₹80 / 20 min</em></div><Link href="/book">Find your time <i>↗</i></Link></article>
+      </section>
+
+      {/* ── PS5 Pricing ───────────────────────────────────────── */}
+      <section className="funk-ps5" id="ps5" aria-labelledby="ps5-title">
+        <div className="funk-ps5__head">
+          <span>04 / PS5 Pricing</span>
+          <h2 id="ps5-title">PICK YOUR<br /><em>SESSION.</em></h2>
+        </div>
+        <div className="funk-ps5__grid">
+          {[
+            { slot: '01', duration: '20 MINUTES', single: '₹60',  extra: '+₹50' },
+            { slot: '02', duration: '40 MINUTES', single: '₹130', extra: '+₹50' },
+            { slot: '03', duration: '60 MINUTES', single: '₹150', extra: '+₹50' },
+          ].map((tier) => (
+            <article className="funk-ps5__card" key={tier.slot}>
+              <div className="funk-ps5__card-top">
+                <span className="funk-ps5__slot">{tier.slot}</span>
+                <span className="funk-ps5__duration">{tier.duration}</span>
+              </div>
+              <div className="funk-ps5__prices">
+                <div className="funk-ps5__price-main">
+                  <strong>{tier.single}</strong>
+                  <span>Single controller</span>
+                </div>
+                <div className="funk-ps5__price-extra">
+                  <strong>{tier.extra}</strong>
+                  <span>For 2 controllers</span>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+        <p className="funk-ps5__note">All sessions include private pod access &amp; DualSense haptics.</p>
       </section>
 
       {/* ── End ──────────────────────────────────────────────── */}

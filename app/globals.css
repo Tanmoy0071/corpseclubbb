@@ -330,3 +330,173 @@ button {
 .funk-cta b { align-items:center; background:#070909; border-radius:7px; color:#fff; display:grid; font:400 15px var(--font-mono); height:71%; place-items:center; width:20.625%; }.funk-cta { align-items:center; background:#fff; border-radius:7px; box-shadow:0 1px 5px rgba(0,0,0,.38); color:#111; display:flex; font:450 15px var(--font-sub); height:clamp(38px,3.96vh,44px); justify-content:space-between; letter-spacing:-.3px; margin-top:clamp(24px,3.11vh,36px); padding:0 3.125% 0 8.125%; width:clamp(142px,15.09vh,168px); }.funk-foot { bottom:var(--bottom); color:rgba(255,255,255,.65); display:flex; font:9px var(--font-mono); justify-content:center; left:50%; letter-spacing:.12em; position:absolute; text-transform:uppercase; transform:translateX(-50%); white-space:nowrap; z-index:2; }.funk-foot span+span:before { color:#f33423; content:"/"; margin:0 12px; }.funk-pending .funk-brand,.funk-pending .funk-nav a,.funk-pending .funk-time,.funk-pending .funk-book,.funk-pending .funk-copy p,.funk-pending .funk-cta { opacity:0; }.funk-pending .funk-line > span { transform:translate3d(0,110%,0) skewY(2deg); }.funk-pending .funk-copy p { transform:translateY(10px); }.funk-pending .funk-cta { transform:translateY(8px) scale(.985); }.funk-pending .funk-brand { animation:funk-brand .58s cubic-bezier(.16,1,.3,1) .06s forwards; }.funk-pending .funk-nav a:nth-child(1){animation:funk-nav .48s cubic-bezier(.16,1,.3,1) .13s forwards}.funk-pending .funk-nav a:nth-child(2){animation:funk-nav .48s cubic-bezier(.16,1,.3,1) .175s forwards}.funk-pending .funk-nav a:nth-child(3){animation:funk-nav .48s cubic-bezier(.16,1,.3,1) .22s forwards}.funk-pending .funk-nav a:nth-child(4){animation:funk-nav .48s cubic-bezier(.16,1,.3,1) .265s forwards}.funk-pending .funk-time{animation:funk-nav .52s cubic-bezier(.16,1,.3,1) .18s forwards}.funk-pending .funk-book,.funk-pending .funk-cta{animation:funk-action .56s cubic-bezier(.16,1,.3,1) .96s forwards}.funk-pending .funk-line--one>span{animation:funk-line .8s cubic-bezier(.22,1,.36,1) .3s forwards}.funk-pending .funk-line--two>span{animation:funk-line .85s cubic-bezier(.22,1,.36,1) .44s forwards}.funk-pending .funk-copy p{animation:funk-copy .62s cubic-bezier(.16,1,.3,1) .74s forwards}@keyframes funk-brand{to{opacity:1;transform:translateY(0) scale(1)}}@keyframes funk-nav{to{opacity:1;transform:translateY(0)}}@keyframes funk-action{to{opacity:1;transform:translateY(0) scale(1)}}@keyframes funk-line{to{transform:translate3d(0,0,0) skewY(0)}}@keyframes funk-copy{to{opacity:1;transform:translateY(0)}}@media(hover:hover){.funk-viewport a,.funk-viewport button{transition:filter .14s,opacity .14s}.funk-viewport a:hover,.funk-viewport button:hover{filter:brightness(1.09)}}
 @media(max-width:780px){.funk-header__actions{background:linear-gradient(145deg,rgba(26,34,36,.9),rgba(8,13,15,.94));backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.16);border-radius:16px;display:flex;flex-direction:column;gap:20px;opacity:0;padding:20px;position:absolute;right:0;top:58px;transform:translateY(-8px) scale(.985);transition:.2s;visibility:hidden;width:min(340px,calc(100vw - 2*var(--edge)))}.funk-header.is-open .funk-header__actions{opacity:1;transform:none;visibility:visible}.funk-nav{display:flex;flex-direction:column;gap:16px;margin:0;top:0}.funk-nav a:first-child{top:0}.funk-time{border-left:0;border-top:1px solid rgba(255,255,255,.2);margin:0;padding:15px 0 0;width:100%}.funk-book{margin:0;padding:12px 0;width:100%}.funk-menu{background:linear-gradient(145deg,rgba(26,34,36,.86),rgba(16,29,33,.9));backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.21);border-radius:11px;display:grid;height:46px;margin-left:auto;place-items:center;width:46px}.funk-menu i{background:#fff;grid-area:1/1;height:1px;transition:transform .2s;width:19px}.funk-menu i:first-child{transform:translateY(-5px)}.funk-menu i:last-child{transform:translateY(5px)}.funk-header.is-open .funk-menu i:first-child{transform:rotate(45deg)}.funk-header.is-open .funk-menu i:last-child{transform:rotate(-45deg)}}
 @media(max-width:619px){.funk-viewport{--edge:max(21px,env(safe-area-inset-left));--bottom:max(28px,env(safe-area-inset-bottom))}.funk-title{font-size:clamp(49px,15.7vw,75px);line-height:clamp(58px,18vw,86px)}.funk-line--one{transform:scaleX(.78)}.funk-line--two{transform:scaleX(.55)}.funk-copy p{font-size:14px;line-height:19px;margin-top:18px;width:min(360px,74vw)}.funk-copy p br{display:none}.funk-cta{margin-top:23px}.funk-card{bottom:auto;right:var(--edge);top:clamp(176px,32svh,300px);width:clamp(128px,38vw,180px)}.funk-video{object-position:58% center}.funk-foot{display:none}}@media(prefers-reduced-motion:reduce){.funk-pending *{animation:none!important;opacity:1!important;transform:none!important;transition:none!important}}
+
+/* ── PS5 Pricing Section ─────────────────────────────────── */
+.funk-ps5 {
+  background: var(--black);
+  color: var(--white);
+  padding: clamp(80px, 12vw, 170px) clamp(22px, 9vw, 150px) clamp(70px, 10vw, 140px);
+}
+
+.funk-ps5__head {
+  border-bottom: 1px solid var(--g200);
+  margin-bottom: clamp(50px, 8vw, 100px);
+  padding-bottom: 18px;
+}
+
+.funk-ps5__head > span {
+  color: var(--g400);
+  font: 10px/1.2 var(--font-mono);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 24px;
+}
+
+.funk-ps5__head h2 {
+  font: 300 clamp(4.2rem, 11vw, 11rem) / .74 var(--font-sub);
+  letter-spacing: -.09em;
+  margin: 0;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.funk-ps5__head h2 em {
+  color: var(--red);
+  font-style: normal;
+}
+
+.funk-ps5__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--g200);
+  border: 1px solid var(--g200);
+}
+
+.funk-ps5__card {
+  background: var(--black);
+  padding: clamp(28px, 4vw, 48px) clamp(24px, 3vw, 40px);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  position: relative;
+  transition: background 200ms var(--ease);
+  overflow: hidden;
+}
+
+.funk-ps5__card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--red);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 300ms var(--ease);
+}
+
+.funk-ps5__card:hover {
+  background: var(--g100);
+}
+
+.funk-ps5__card:hover::after {
+  transform: scaleX(1);
+}
+
+.funk-ps5__card-top {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  border-bottom: 1px solid var(--g200);
+  padding-bottom: 22px;
+}
+
+.funk-ps5__slot {
+  font: 700 clamp(2.8rem, 5vw, 5rem) / 1 var(--font-display);
+  color: var(--red);
+  letter-spacing: -.04em;
+  line-height: 1;
+}
+
+.funk-ps5__duration {
+  font: 500 10px/1 var(--font-mono);
+  letter-spacing: .16em;
+  color: var(--g500);
+  text-transform: uppercase;
+}
+
+.funk-ps5__prices {
+  display: flex;
+  gap: clamp(16px, 3vw, 32px);
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.funk-ps5__price-main,
+.funk-ps5__price-extra {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.funk-ps5__price-main strong {
+  font: 300 clamp(2.6rem, 4.5vw, 4.8rem) / .9 var(--font-sub);
+  letter-spacing: -.07em;
+  color: var(--white);
+  display: block;
+}
+
+.funk-ps5__price-extra {
+  border-left: 1px solid var(--g200);
+  padding-left: clamp(14px, 2.5vw, 28px);
+}
+
+.funk-ps5__price-extra strong {
+  font: 300 clamp(2rem, 3vw, 3.2rem) / .9 var(--font-sub);
+  letter-spacing: -.07em;
+  color: var(--red);
+  display: block;
+}
+
+.funk-ps5__price-main span,
+.funk-ps5__price-extra span {
+  font: 9px/1 var(--font-mono);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--g400);
+}
+
+.funk-ps5__note {
+  margin: clamp(32px, 4vw, 50px) 0 0;
+  font: 10px/1.4 var(--font-mono);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--g400);
+  text-align: center;
+}
+
+@media (max-width: 780px) {
+  .funk-ps5__grid {
+    grid-template-columns: 1fr;
+  }
+  .funk-ps5__card {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 440px) {
+  .funk-ps5__prices {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .funk-ps5__price-extra {
+    border-left: none;
+    border-top: 1px solid var(--g200);
+    padding-left: 0;
+    padding-top: 14px;
+  }
+}
+
